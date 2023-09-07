@@ -11,23 +11,18 @@ collectstatic:
 superuser:
 	@python manage.py createsuperuser
 
-run:
+runserver:
 	@python manage.py runserver 8001
 
-django-shell:
+shell:
 	@python manage.py shell
 
-build:
-	@docker compose build
-
-start:
-	@docker compose up -d
-
-start-live:
-	@docker compose up
-
-stop:
-	@docker compose down
-
-kill:
-	@docker compose down -v
+dev:
+	@pip install pip
+	@python -m virtualenv venv
+	@source venv/bin/activate
+	@pip install -r requirements.txt
+	@python manage.py migrate
+	@python manage.py collectstatic --no-input
+	@python manage.py createsuperuser
+	@python manage.py runserver
