@@ -1,0 +1,59 @@
+version: '3.8'
+services:
+  web:
+    container_name: django_project
+    build:
+      context: . # local base image dir
+      # ssh: ["default"] # mount the deafult ssh agent
+      dockerfile: Dockerfile
+      # shm_size: '1gb'
+      # platforms: ["linux/arm64","linux/arm32",]
+    command: 
+      - python manage.py runserver 0.0.0.0:8000
+      - celery worker --app=blog --loglevel=info
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env
+    environment:
+      - DEBUG=True
+      - DJANGO_SETTINGS_MODULE=core.settings
+      - CELERY_BROKER_URL=redis://redis:6379/1
+    volumes:
+      - ./docker/backup:/app
+    networks:
+      - main
+    depends_on:
+      - database
+
+  redis:
+    container_name: redis
+    image: redis:alpine
+
+  elasticsearch:
+    container_name: esearch
+    image: elasticsearch:7.14.2
+    ports: 
+      - "9200:9200"
+    environment:
+      - discovery.type=single-node
+
+  database:
+    container_name: postgres_db
+    image: postgres
+    restart: always
+    environment:
+      POSTRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    
+networks:
+  main:
+
+volumes:
+  static:
+  pgdata:
