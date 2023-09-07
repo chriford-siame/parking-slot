@@ -14,10 +14,9 @@
 2. SQlite
 
 ```
-1. git clone git@github.com:modercai/AirportZ.git
-```
 ### Local Setup Guide
 ```
+1. git clone git@github.com:modercai/AirportZ.git
 2.  python -m virtualenv venv
 
 3.  source venv/bin/activate
@@ -37,8 +36,8 @@
 10. make migrations | python manage.py makemigrations
 ```
 
-```
 ### Initial Local Setup
+```
 1. make init-local
 
 2. source venv/bin/activate
