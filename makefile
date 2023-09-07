@@ -17,10 +17,12 @@ runserver:
 shell:
 	@python manage.py shell
 
-dev:
+init-local:
 	@pip install pip
+	@pip install virtualenv
 	@python -m virtualenv venv
-	@source venv/bin/activate
+
+dev:
 	@pip install -r requirements.txt
 	@python manage.py migrate
 	@python manage.py collectstatic --no-input
