@@ -18,19 +18,23 @@
 ```
 ### Local Setup Guide
 ```
-2. python -m virtualenv venv
+2.  python -m virtualenv venv
 
-3. source venv/bin/activate
+3.  source venv/bin/activate
 
-4. make install | pip install -r requirements.txt
+4.  make install | pip install -r requirements.txt
 
-5. make migrate | python manage.py migrate
+5.  make migrate | python manage.py migrate
 
-6. make collectstatic | python manage.py collectstatic --no-input
+6.  make collectstatic | python manage.py collectstatic --no-input
 
-7. make superuser | python manage.py createsuperuser
+7.  make superuser | python manage.py createsuperuser
 
-8. make runserver | python manage.py runserver
+8.  make runserver | python manage.py runserver
+
+9.  make shell | python manage.py shell
+
+10. make migrations | python manage.py makemigrations
 ```
 
 ```
