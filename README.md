@@ -39,6 +39,9 @@
 
 ```
 ### Initial Local Setup
+1. make init-local
 
-1. make dev
+2. source venv/bin/activate
+
+3. make dev
 ```
