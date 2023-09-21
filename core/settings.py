@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'airport',
 ]
 
 MIDDLEWARE = [
@@ -105,7 +106,9 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [BASE_DIR]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'core/staticfiles/'),
+]
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = os.path.join(BASE_DIR, 'media/')
