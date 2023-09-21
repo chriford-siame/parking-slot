@@ -61,8 +61,10 @@ def payment_fail(request):
     return render(request, 'payment/success.html')
 
 def parking_slot_validity(request):
-    
-    return render(request, 'other/plans.html')
+    if request.method == 'POST':
+        entry_date = request.POST.get('entry-date')
+        entry_time = request.POST.get('entry-time')
+        return
 
 def parking_slot_plans(request):
     return render(request, 'other/plans.html')
