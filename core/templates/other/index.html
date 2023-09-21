@@ -1,24 +1,538 @@
 {% extends 'layout/base.html' %}
-{% block title %} Home {% endblock %}
-{% block content%}
-<div class="w-100"
-    style="height:160px; background-image: url(https://www.londoncalling.com/images/uploads/feature_images/370775225_87b540808b_z.jpg);">
-</div>
-<div class="album bg" style="margin-top: -2em;">
-    <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col-md-6">
-                <div class="card shadow-sm">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c"></rect>
-                        <text x="40%" y="50%" fill="#eceeef" dy=".3em" class="h2">G8 - G9</text>
-                    </svg>
+{% load static %}
+{% block title %}Index{% endblock title %}
+{% block content %}
+    
+  {% include 'include/modal/reserve_date.html' %}
+    <!-- End Header/Navbar -->
+    {% include 'include/intro.html' %}
+
+    <main id="main">
+      <!-- ======= Top Airports Section ======= -->
+      <section class="section-property section-t8">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="title-wrap d-flex justify-content-between">
+                <div class="title-box">
+                  <h2 class="title-a">Top Airports</h2>
                 </div>
+                <div class="title-link">
+                  <a href="property-grid.html">View All
+                    <span class="bi bi-chevron-right"></span>
+                  </a>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
-</div><br>
-{% endblock %}
+          </div>
+
+          <div id="property-carousel" class="swiper">
+            <div class="swiper-wrapper">
+
+              <div class="carousel-item-b swiper-slide">
+                <div class="card-box-a card-shadow">
+                  <div class="img-box-a">
+                    <img src="{% static 'assets/img/property-10.jpg' %}" alt
+                      class="img-a img-fluid">
+                  </div>
+                  <div class="card-overlay">
+                    <div class="card-overlay-a-content">
+                      <div class="card-header-a">
+                        <h2 class="card-title-a">
+                          <a href="property-single.html">01 Keneth Kauda
+                            <br />
+                            <p class="h4 text-warning">20km away</p>
+                          </a>
+                        </h2>
+                      </div>
+                      <div class="card-body-a">
+                        <div class="price-box d-flex">
+                          <span class="price-a">free parking slots | 58</span>
+                        </div>
+                        <a href="#" class="link-a">View parking slots
+                          <span class="bi bi-chevron-right"></span>
+                        </a>
+                      </div>
+                      <div class="card-footer-a">
+                        <ul class="card-info d-flex justify-content-around">
+                          <li>
+                            <h4 class="card-info-title">Available</h4>
+                            <span>58</span>
+                          </li>
+                          <li>
+                            <h4 class="card-info-title">Occupied</h4>
+                            <span>70</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- End carousel item -->
+
+              <div class="carousel-item-b swiper-slide">
+                <div class="card-box-a card-shadow">
+                  <div class="img-box-a">
+                    <img src="{% static 'assets/img/property-10.jpg' %}" alt
+                      class="img-a img-fluid">
+                  </div>
+                  <div class="card-overlay">
+                    <div class="card-overlay-a-content">
+                      <div class="card-header-a">
+                        <h2 class="card-title-a">
+                          <a href="property-single.html">02 Kabwe
+                            <br />
+                            <p class="h4 text-warning">30km away</p>
+                          </a>
+                        </div>
+                        <div class="card-body-a">
+                          <div class="price-box d-flex">
+                            <span class="price-a">free parking slots | 58</span>
+                          </div>
+                          <a href="property-single.html" class="link-a">view more details
+                            <span class="bi bi-chevron-right"></span>
+                          </a>
+                        </div>
+                        <div class="card-footer-a">
+                          <ul class="card-info d-flex justify-content-around">
+                            <li>
+                              <h4 class="card-info-title">Available</h4>
+                              <span>58</span>
+                            </li>
+                            <li>
+                              <h4 class="card-info-title">Occupied</h4>
+                              <span>70</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End carousel item -->
+
+                <div class="carousel-item-b swiper-slide">
+                  <div class="card-box-a card-shadow">
+                    <div class="img-box-a">
+                      <img src="{% static 'assets/img/property-10.jpg' %}" alt
+                        class="img-a img-fluid">
+                    </div>
+                    <div class="card-overlay">
+                      <div class="card-overlay-a-content">
+                        <div class="card-header-a">
+                          <h2 class="card-title-a">
+                            <a href="property-single.html"> 03 CIP
+                              <br />
+                              <p class="h4 text-warning">20.4km away</p>
+                            </a>
+                          </h2>
+                        </div>
+                        <div class="card-body-a">
+                          <div class="price-box d-flex">
+                            <span class="price-a">free parking slots | 58</span>
+                          </div>
+                          <a href="property-single.html" class="link-a">view more details
+                            <span class="bi bi-chevron-right"></span>
+                          </a>
+                        </div>
+                        <div class="card-footer-a">
+                          <ul class="card-info d-flex justify-content-around">
+                            <li>
+                              <h4 class="card-info-title">Available</h4>
+                              <span>58</span>
+                            </li>
+                            <li>
+                              <h4 class="card-info-title">Occupied</h4>
+                              <span>70</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End carousel item -->
+
+                <div class="carousel-item-b swiper-slide">
+                  <div class="card-box-a card-shadow">
+                    <div class="img-box-a">
+                      <img src="{% static 'assets/img/property-10.jpg' %}" alt
+                        class="img-a img-fluid">
+                    </div>
+                    <div class="card-overlay">
+                      <div class="card-overlay-a-content">
+                        <div class="card-header-a">
+                          <h2 class="card-title-a">
+                            <a href="property-single.html">04 Chipata
+                              <br />
+                              <p class="h4 text-warning">21.4km away</p>
+                            </a>
+                          </h2>
+                        </div>
+                        <div class="card-body-a">
+                          <div class="price-box d-flex">
+                            <span class="price-a">free parking slots | 58</span>
+                          </div>
+                          <a href="property-single.html" class="link-a">view more details
+                            <span class="bi bi-chevron-right"></span>
+                          </a>
+                        </div>
+                        <div class="card-footer-a">
+                          <ul class="card-info d-flex justify-content-around">
+                            <li>
+                              <h4 class="card-info-title">Available</h4>
+                              <span>58</span>
+                            </li>
+                            <li>
+                              <h4 class="card-info-title">Occupied</h4>
+                              <span>70</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End carousel item -->
+
+                <div class="carousel-item-b swiper-slide">
+                  <div class="card-box-a card-shadow">
+                    <div class="img-box-a">
+                      <img src="{% static 'assets/img/property-10.jpg' %}" alt
+                        class="img-a img-fluid">
+                    </div>
+                    <div class="card-overlay">
+                      <div class="card-overlay-a-content">
+                        <div class="card-header-a">
+                          <h2 class="card-title-a">
+                            <a href="property-single.html">05 Solwezi
+                              <br />
+                              <p class="h4 text-warning">24.8km away</p>
+                            </a>
+                          </h2>
+                        </div>
+                        <div class="card-body-a">
+                          <div class="price-box d-flex">
+                            <span class="price-a">free parking slots | 58</span>
+                          </div>
+                          <a href="property-single.html" class="link-a">view more details
+                            <span class="bi bi-chevron-right"></span>
+                          </a>
+                        </div>
+                        <div class="card-footer-a">
+                          <ul class="card-info d-flex justify-content-around">
+                            <li>
+                              <h4 class="card-info-title">Available</h4>
+                              <span>58</span>
+                            </li>
+                            <li>
+                              <h4 class="card-info-title">Occupied</h4>
+                              <span>70</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End carousel item -->
+
+                <div class="carousel-item-b swiper-slide">
+                  <div class="card-box-a card-shadow">
+                    <div class="img-box-a">
+                      <img src="{% static 'assets/img/property-10.jpg' %}" alt
+                        class="img-a img-fluid">
+                    </div>
+                    <div class="card-overlay">
+                      <div class="card-overlay-a-content">
+                        <div class="card-header-a">
+                          <h2 class="card-title-a">
+                            <a href="property-single.html">06 Mfuwe
+                              <br />
+                              <p class="h4 text-warning">21.4km away</p>
+                            </a>
+                          </h2>
+                        </div>
+                        <div class="card-body-a">
+                          <div class="price-box d-flex">
+                            <span class="price-a">free parking slots | 58</span>
+                          </div>
+                          <a href="property-single.html" class="link-a">view more details
+                            <span class="bi bi-chevron-right"></span>
+                          </a>
+                        </div>
+                        <div class="card-footer-a">
+                          <ul class="card-info d-flex justify-content-around">
+                            <li>
+                              <h4 class="card-info-title">Available</h4>
+                              <span>58</span>
+                            </li>
+                            <li>
+                              <h4 class="card-info-title">Occupied</h4>
+                              <span>70</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End carousel item -->
+
+                <div class="carousel-item-b swiper-slide">
+                  <div class="card-box-a card-shadow">
+                    <div class="img-box-a">
+                      <img src="{% static 'assets/img/property-10.jpg' %}" alt
+                        class="img-a img-fluid">
+                    </div>
+                    <div class="card-overlay">
+                      <div class="card-overlay-a-content">
+                        <div class="card-header-a">
+                          <h2 class="card-title-a">
+                            <a href="property-single.html">07 Livingstone
+                              <br />
+                              <p class="h4 text-warning">21.4km away</p>
+                            </a>
+                          </h2>
+                        </div>
+                        <div class="card-body-a">
+                          <div class="price-box d-flex">
+                            <span class="price-a">free parking slots | 58</span>
+                          </div>
+                          <a href="property-single.html" class="link-a">view more details
+                            <span class="bi bi-chevron-right"></span>
+                          </a>
+                        </div>
+                        <div class="card-footer-a">
+                          <ul class="card-info d-flex justify-content-around">
+                            <li>
+                              <h4 class="card-info-title">Available</h4>
+                              <span>58</span>
+                            </li>
+                            <li>
+                              <h4 class="card-info-title">Occupied</h4>
+                              <span>70</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End carousel item -->
+              </div>
+            </div>
+            <div class="propery-carousel-pagination carousel-pagination"></div>
+
+          </div>
+        </section>
+        <!-- ======= Latest News Section ======= -->
+        <section class="section-news section-t8">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="title-wrap d-flex justify-content-between">
+                  <div class="title-box">
+                    <h2 class="title-a">Latest News</h2>
+                  </div>
+                  <div class="title-link">
+                    <a href="{% url 'blogs' %}">All News
+                      <span class="bi bi-chevron-right"></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="news-carousel" class="swiper">
+              <div class="swiper-wrapper">
+
+                <div class="carousel-item-c swiper-slide">
+                  <div class="card-box-b card-shadow news-box">
+                    <div class="img-box-b">
+                      <img src="{% static 'assets/img/post-2.jpg' %}" alt
+                        class="img-b img-fluid">
+                    </div>
+                    <div class="card-overlay">
+                      <div class="card-header-b">
+                        <div class="card-category-b">
+                          <a href="#" class="category-b">House</a>
+                        </div>
+                        <div class="card-title-b">
+                          <h2 class="title-2">
+                            <a href="{% url 'blog' %}">House is comming
+                              <br> new</a>
+                          </h2>
+                        </div>
+                        <div class="card-date">
+                          <span class="date-b">18 Sep. 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End carousel item -->
+
+                <div class="carousel-item-c swiper-slide">
+                  <div class="card-box-b card-shadow news-box">
+                    <div class="img-box-b">
+                      <img src="{% static 'assets/img/post-5.jpg' %}" alt
+                        class="img-b img-fluid">
+                    </div>
+                    <div class="card-overlay">
+                      <div class="card-header-b">
+                        <div class="card-category-b">
+                          <a href="#" class="category-b">Travel</a>
+                        </div>
+                        <div class="card-title-b">
+                          <h2 class="title-2">
+                            <a href="{% url 'blog' %}">Travel is comming
+                              <br> new</a>
+                          </h2>
+                        </div>
+                        <div class="card-date">
+                          <span class="date-b">18 Sep. 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End carousel item -->
+
+                <div class="carousel-item-c swiper-slide">
+                  <div class="card-box-b card-shadow news-box">
+                    <div class="img-box-b">
+                      <img src="{% static 'assets/img/post-7.jpg' %}" alt
+                        class="img-b img-fluid">
+                    </div>
+                    <div class="card-overlay">
+                      <div class="card-header-b">
+                        <div class="card-category-b">
+                          <a href="#" class="category-b">Park</a>
+                        </div>
+                        <div class="card-title-b">
+                          <h2 class="title-2">
+                            <a href="{% url 'blog' %}">Park is comming
+                              <br> new</a>
+                          </h2>
+                        </div>
+                        <div class="card-date">
+                          <span class="date-b">18 Sep. 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End carousel item -->
+
+                <div class="carousel-item-c swiper-slide">
+                  <div class="card-box-b card-shadow news-box">
+                    <div class="img-box-b">
+                      <img src="{% static 'assets/img/post-3.jpg' %}" alt
+                        class="img-b img-fluid">
+                    </div>
+                    <div class="card-overlay">
+                      <div class="card-header-b">
+                        <div class="card-category-b">
+                          <a href="#" class="category-b">Travel</a>
+                        </div>
+                        <div class="card-title-b">
+                          <h2 class="title-2">
+                            <a href="#">Travel is comming
+                              <br> new</a>
+                          </h2>
+                        </div>
+                        <div class="card-date">
+                          <span class="date-b">18 Sep. 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End carousel item -->
+
+              </div>
+            </div>
+
+            <div class="news-carousel-pagination carousel-pagination"></div>
+          </div>
+        </section>
+        <!-- End Latest News Section -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <section class="section-testimonials section-t8 nav-arrow-a">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="title-wrap d-flex justify-content-between">
+                  <div class="title-box">
+                    <h2 class="title-a">Testimonials</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="testimonial-carousel" class="swiper">
+              <div class="swiper-wrapper">
+
+                <div class="carousel-item-a swiper-slide">
+                  <div class="testimonials-box">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                        <div class="testimonial-img">
+                          <img src="{% static 'assets/img/testimonial-1.jpg' %}" alt
+                            class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="testimonial-ico">
+                          <i class="bi bi-chat-quote-fill"></i>
+                        </div>
+                        <div class="testimonials-content">
+                          <p class="testimonial-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Omnis, cupiditate ea nam praesentium
+                            debitis hic ber quibusdam
+                            voluptatibus officia expedita corpori.
+                          </p>
+                        </div>
+                        <div class="testimonial-author-box">
+                          <img src="{% static 'assets/img/mini-testimonial-1.jpg' %}" alt
+                            class="testimonial-avatar">
+                          <h5 class="testimonial-author">Albert & Erika</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End carousel item -->
+
+                <div class="carousel-item-a swiper-slide">
+                  <div class="testimonials-box">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                        <div class="testimonial-img">
+                          <img src="{% static 'assets/img/testimonial-2.jpg' %}" alt
+                            class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="testimonial-ico">
+                          <i class="bi bi-chat-quote-fill"></i>
+                        </div>
+                        <div class="testimonials-content">
+                          <p class="testimonial-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Omnis, cupiditate ea nam praesentium
+                            debitis hic ber quibusdam
+                            voluptatibus officia expedita corpori.
+                          </p>
+                        </div>
+                        <div class="testimonial-author-box">
+                          <img src="{% static 'assets/img/mini-testimonial-2.jpg' %}" alt
+                            class="testimonial-avatar">
+                          <h5 class="testimonial-author">Pablo & Emma</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End carousel item -->
+
+              </div>
+            </div>
+            <div class="testimonial-carousel-pagination carousel-pagination"></div>
+
+          </div>
+        </section><!-- End Testimonials Section -->
+
+      </main><!-- End #main -->
+{% endblock content %}

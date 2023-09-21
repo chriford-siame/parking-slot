@@ -1,0 +1,64 @@
+<form method="post" class="modal fade" id="parking_slot_form" tabindex="-1"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  {% csrf_token %}
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">Parking Slot
+          Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{% url '' %}" method="post">
+          <select class="form-select" name aria-label="Default select example">
+            <option selected>Select Airport</option>
+            <option value="1">Copperbelt</option>
+            <option value="2">Chipata</option>
+            <option value="3">Mfuwe</option>
+            <option value="4">...</option>
+          </select>
+          <small><sup dir="ltr" class="pl-1">Click and select an airport for which you want to check a reservation</sup></small>
+          <div class="row">
+            <div class="col-md-6">
+              <div>
+                <label for="entryDate" class="text-mute">Entry date</label>
+                <input required id="entryDate" class="form-control" type="date"
+                  name="entry-date">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <label for="entryTime" class="text-mute">Entry time</label>
+                <input required id="entryTime" class="form-control" type="time"
+                  name="exit-time">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div>
+                <label for="exitDate" class="text-mute">Exit date</label>
+                <input required id="exitDate" class="form-control" type="date"
+                  name="exit-date">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <label for="exitTime" class="text-mute">Exit time</label>
+                <input required id="exitTime" class="form-control" type="time"
+                  name="exit-time">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="submit float-start" class="btn btn-secondary"
+          data-bs-dismiss="modal">Check availability</button>
+        <button type="reset float-end" class="btn btn-primary">Reset</button>
+      </div>
+    </div>
+  </div>
+</form>
