@@ -12,6 +12,8 @@ from airport.views import (
     payment_fail, 
     payment_success,
     payment_processor,
+    parking_slot_view,
+    parking_slot_plans,
 )
 
 urlpatterns = [
@@ -20,6 +22,8 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('blogs/', blogs, name='blogs'),
     path('blog/', blog, name='blog'),
+    path('slot/<str:airport>/view/', parking_slot_view, name='slot_view'),
+    path('slot/plans/', parking_slot_plans, name='slot_plans'),
 
     path('payment/success/', payment_success, name='success'),
     path('payment/fail/', payment_fail, name='fail'),
