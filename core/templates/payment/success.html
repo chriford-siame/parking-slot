@@ -2,7 +2,16 @@
 {% load static %}
 {% block title %}Payment - Success{% endblock title %}
 {% block content %}
-  <main id="main">
-    
+<br /><br /><br /><br /><br /><br />
+  <main>
+    <div class="container">
+      <h4 class="text-center text-muted">Payment Successful</h4><br />
+      <div class="d-flex p-3 mt-0 bg-success justify-content-center justify-items-center">
+        <div>
+          <p class="text-white">Your parking slot has reserved for you <br /> Open the document below to see more details</p>
+        </div>
+      </div>
+    </div>
   </main><!-- End #main -->
+  {% block footer %}{% endblock footer %}
 {% endblock content %}

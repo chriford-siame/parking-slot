@@ -37,11 +37,15 @@
     </head>
 
     <body>
-        {% include 'include/header.html' %}
+        {% block header %}
+            {% include 'include/header.html' %}
+        {% endblock %}
         {% include 'include/search_bar.html' %}
         {% block content %}{% endblock %}
         <!-- ======= Footer ======= -->
-        {% include 'include/footer.html' %}        
+        {% block footer %}
+            {% include 'include/footer.html' %}        
+        {% endblock %}
         <!-- End  Footer -->
 
         <div id="preloader"></div>

@@ -15,7 +15,7 @@
             <div class="col-md-12">
               <div class="title-wrap d-flex justify-content-between">
                 <div class="title-box">
-                  <h2 class="title-a">Top Airports</h2>
+                  <h2 class="title-a">Airports</h2>
                 </div>
                 <div class="title-link">
                   <a href="property-grid.html">View All
@@ -27,19 +27,19 @@
           </div>
 
           <div id="property-carousel" class="swiper">
-            <div class="swiper-wrapper">
-
+            <div id="airports" class="swiper-wrapper">
+              {% for airport in airports %}
               <div class="carousel-item-b swiper-slide">
                 <div class="card-box-a card-shadow">
                   <div class="img-box-a">
-                    <img src="{% static 'assets/img/property-10.jpg' %}" alt
+                    <img src="{% static 'assets/img/slide-4.jpg' %}" alt
                       class="img-a img-fluid">
                   </div>
                   <div class="card-overlay">
                     <div class="card-overlay-a-content">
                       <div class="card-header-a">
                         <h2 class="card-title-a">
-                          <a href="property-single.html">01 Keneth Kauda
+                          <a href="#"> {{ airport.index }} {{airport.name}}
                             <br />
                             <p class="h4 text-warning">20km away</p>
                           </a>
@@ -49,7 +49,7 @@
                         <div class="price-box d-flex">
                           <span class="price-a">free parking slots | 58</span>
                         </div>
-                        <a href="#" class="link-a">View parking slots
+                        <a href="{% url 'slot_view' airport=airport.name %}" class="link-a">Get started
                           <span class="bi bi-chevron-right"></span>
                         </a>
                       </div>
@@ -69,251 +69,7 @@
                   </div>
                 </div>
               </div><!-- End carousel item -->
-
-              <div class="carousel-item-b swiper-slide">
-                <div class="card-box-a card-shadow">
-                  <div class="img-box-a">
-                    <img src="{% static 'assets/img/property-10.jpg' %}" alt
-                      class="img-a img-fluid">
-                  </div>
-                  <div class="card-overlay">
-                    <div class="card-overlay-a-content">
-                      <div class="card-header-a">
-                        <h2 class="card-title-a">
-                          <a href="property-single.html">02 Kabwe
-                            <br />
-                            <p class="h4 text-warning">30km away</p>
-                          </a>
-                        </div>
-                        <div class="card-body-a">
-                          <div class="price-box d-flex">
-                            <span class="price-a">free parking slots | 58</span>
-                          </div>
-                          <a href="property-single.html" class="link-a">view more details
-                            <span class="bi bi-chevron-right"></span>
-                          </a>
-                        </div>
-                        <div class="card-footer-a">
-                          <ul class="card-info d-flex justify-content-around">
-                            <li>
-                              <h4 class="card-info-title">Available</h4>
-                              <span>58</span>
-                            </li>
-                            <li>
-                              <h4 class="card-info-title">Occupied</h4>
-                              <span>70</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End carousel item -->
-
-                <div class="carousel-item-b swiper-slide">
-                  <div class="card-box-a card-shadow">
-                    <div class="img-box-a">
-                      <img src="{% static 'assets/img/property-10.jpg' %}" alt
-                        class="img-a img-fluid">
-                    </div>
-                    <div class="card-overlay">
-                      <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                          <h2 class="card-title-a">
-                            <a href="property-single.html"> 03 CIP
-                              <br />
-                              <p class="h4 text-warning">20.4km away</p>
-                            </a>
-                          </h2>
-                        </div>
-                        <div class="card-body-a">
-                          <div class="price-box d-flex">
-                            <span class="price-a">free parking slots | 58</span>
-                          </div>
-                          <a href="property-single.html" class="link-a">view more details
-                            <span class="bi bi-chevron-right"></span>
-                          </a>
-                        </div>
-                        <div class="card-footer-a">
-                          <ul class="card-info d-flex justify-content-around">
-                            <li>
-                              <h4 class="card-info-title">Available</h4>
-                              <span>58</span>
-                            </li>
-                            <li>
-                              <h4 class="card-info-title">Occupied</h4>
-                              <span>70</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End carousel item -->
-
-                <div class="carousel-item-b swiper-slide">
-                  <div class="card-box-a card-shadow">
-                    <div class="img-box-a">
-                      <img src="{% static 'assets/img/property-10.jpg' %}" alt
-                        class="img-a img-fluid">
-                    </div>
-                    <div class="card-overlay">
-                      <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                          <h2 class="card-title-a">
-                            <a href="property-single.html">04 Chipata
-                              <br />
-                              <p class="h4 text-warning">21.4km away</p>
-                            </a>
-                          </h2>
-                        </div>
-                        <div class="card-body-a">
-                          <div class="price-box d-flex">
-                            <span class="price-a">free parking slots | 58</span>
-                          </div>
-                          <a href="property-single.html" class="link-a">view more details
-                            <span class="bi bi-chevron-right"></span>
-                          </a>
-                        </div>
-                        <div class="card-footer-a">
-                          <ul class="card-info d-flex justify-content-around">
-                            <li>
-                              <h4 class="card-info-title">Available</h4>
-                              <span>58</span>
-                            </li>
-                            <li>
-                              <h4 class="card-info-title">Occupied</h4>
-                              <span>70</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End carousel item -->
-
-                <div class="carousel-item-b swiper-slide">
-                  <div class="card-box-a card-shadow">
-                    <div class="img-box-a">
-                      <img src="{% static 'assets/img/property-10.jpg' %}" alt
-                        class="img-a img-fluid">
-                    </div>
-                    <div class="card-overlay">
-                      <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                          <h2 class="card-title-a">
-                            <a href="property-single.html">05 Solwezi
-                              <br />
-                              <p class="h4 text-warning">24.8km away</p>
-                            </a>
-                          </h2>
-                        </div>
-                        <div class="card-body-a">
-                          <div class="price-box d-flex">
-                            <span class="price-a">free parking slots | 58</span>
-                          </div>
-                          <a href="property-single.html" class="link-a">view more details
-                            <span class="bi bi-chevron-right"></span>
-                          </a>
-                        </div>
-                        <div class="card-footer-a">
-                          <ul class="card-info d-flex justify-content-around">
-                            <li>
-                              <h4 class="card-info-title">Available</h4>
-                              <span>58</span>
-                            </li>
-                            <li>
-                              <h4 class="card-info-title">Occupied</h4>
-                              <span>70</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End carousel item -->
-
-                <div class="carousel-item-b swiper-slide">
-                  <div class="card-box-a card-shadow">
-                    <div class="img-box-a">
-                      <img src="{% static 'assets/img/property-10.jpg' %}" alt
-                        class="img-a img-fluid">
-                    </div>
-                    <div class="card-overlay">
-                      <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                          <h2 class="card-title-a">
-                            <a href="property-single.html">06 Mfuwe
-                              <br />
-                              <p class="h4 text-warning">21.4km away</p>
-                            </a>
-                          </h2>
-                        </div>
-                        <div class="card-body-a">
-                          <div class="price-box d-flex">
-                            <span class="price-a">free parking slots | 58</span>
-                          </div>
-                          <a href="property-single.html" class="link-a">view more details
-                            <span class="bi bi-chevron-right"></span>
-                          </a>
-                        </div>
-                        <div class="card-footer-a">
-                          <ul class="card-info d-flex justify-content-around">
-                            <li>
-                              <h4 class="card-info-title">Available</h4>
-                              <span>58</span>
-                            </li>
-                            <li>
-                              <h4 class="card-info-title">Occupied</h4>
-                              <span>70</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End carousel item -->
-
-                <div class="carousel-item-b swiper-slide">
-                  <div class="card-box-a card-shadow">
-                    <div class="img-box-a">
-                      <img src="{% static 'assets/img/property-10.jpg' %}" alt
-                        class="img-a img-fluid">
-                    </div>
-                    <div class="card-overlay">
-                      <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                          <h2 class="card-title-a">
-                            <a href="property-single.html">07 Livingstone
-                              <br />
-                              <p class="h4 text-warning">21.4km away</p>
-                            </a>
-                          </h2>
-                        </div>
-                        <div class="card-body-a">
-                          <div class="price-box d-flex">
-                            <span class="price-a">free parking slots | 58</span>
-                          </div>
-                          <a href="property-single.html" class="link-a">view more details
-                            <span class="bi bi-chevron-right"></span>
-                          </a>
-                        </div>
-                        <div class="card-footer-a">
-                          <ul class="card-info d-flex justify-content-around">
-                            <li>
-                              <h4 class="card-info-title">Available</h4>
-                              <span>58</span>
-                            </li>
-                            <li>
-                              <h4 class="card-info-title">Occupied</h4>
-                              <span>70</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End carousel item -->
+              {% endfor %}
               </div>
             </div>
             <div class="propery-carousel-pagination carousel-pagination"></div>
