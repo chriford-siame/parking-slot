@@ -1,10 +1,12 @@
-from django.shortcuts import render, redirect, HttpResponse
 import math
-import requests
 import random
 import environ
-from rest_framework.response import Response
+import requests
 from django.contrib import messages
+from rest_framework.response import Response
+from django.shortcuts import render, redirect, HttpResponse
+from django.views.decorators.http import require_http_methods
+
 # env = environ.Env()
 # environ.Env.read_env()
 
@@ -16,7 +18,7 @@ def process_payment(plan, amount):
         "tx_ref": ''+str(math.floor(1000000 + random.random()*9000000)),
         "amount": amount,
         "currency": "ZMW",
-        "redirect_url": "http://localhost:8001/payment/success",
+        "redirect_url": "http://localhost:8001/payment/callback",
         "payment_options": "card, ZBMobile",
         "meta": {
             "consumer_id": 23,
@@ -135,11 +137,19 @@ def parking_slot_plans(request):
     return render(request, 'other/plans.html')
 
 
-def payment_success(request):
-    status = request.GET.get('status', None)
-    tx_ref = request.GET.get('tx_ref', None)
-    return render(request, 'payment/success.html')
-
+@require_http_methods(['GET', 'POST'])
+def payment_response(request):
+    status=request.GET.get('status', None)
+    tx_ref=request.GET.get('tx_ref', None)
+    print(status)
+    print(tx_ref)
+    return render(request, 'payment/payment_callback.html', {
+        'payment_status': status,
+        'tx_ref': tx_ref,
+    })
 
 def payment_fail(request):
     return render(request, 'payment/fail.html')
+
+def payment_success(request):
+    return render(request, 'payment/success.html')
