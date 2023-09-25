@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'airport',
+    'authentication',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,4 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     # 'authentication.models.User'
 ]
+AUTH_USER_MODEL = 'authentication.User'
