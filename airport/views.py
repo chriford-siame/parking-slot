@@ -153,3 +153,14 @@ def payment_fail(request):
 
 def payment_success(request):
     return render(request, 'payment/success.html')
+
+def analytics(request):
+    return render(request, 'other/analytics.html')
+
+
+def notifications(request):
+    return render(request, 'other/notifications.html')
+
+
+def guide(request):
+    return render(request, 'other/guide.html')
