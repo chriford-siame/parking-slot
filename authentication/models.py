@@ -62,9 +62,13 @@ class User(AbstractUser, PermissionsMixin):
     last_name = models.CharField(
         _("Last Name"), max_length=255, null=True, blank=True
     )
-    cell = models.CharField(
+    phone_number = models.CharField(
         _("Phone number"), max_length=15, null=True, blank=True
     )
+    alternative_phone_number = models.CharField(
+        _("Alternative Phone number"), max_length=15, null=True, blank=True
+    )
+    
     email = models.EmailField(
         _("Email"), 
         # unique=True,
