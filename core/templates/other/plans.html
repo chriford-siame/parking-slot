@@ -7,170 +7,116 @@
   <!-- =======Plans Section ======= -->
   <br /><br /><br /><br /><br /><br />
   <section class="container">
-    <div class="row">
+    <div class="d-flex justify-content-center">
 
       <div class="col-4">
-        <form method="post" action="" class="card">
+        <form method="post" action class="card">
           {% csrf_token %}
-          <input type="hidden" name="plan" value="basic">
-          <input type="hidden" name="amount" value="20">
+          <input type="hidden" name="plan" value="Plan">
+          <input type="hidden" name="amount" value="153.00">
           <div class="card-header">
-            <p class="h4 text-center text-muted">Basic</p>
+            <p class="h4 text-muted text-center">Plan</p>
           </div>
           <div class="card-body">
-            <p class="h6 text-dark text-center">$20/day</p>
-            <ul class="list-group">
+            <p class="h6 text-muted text-center">Total: $153/day</p>
+            <ul class="list-group border-bottom">
               <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
+                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                <span class="d-flex justify-content-evenly w-100">
+                  <span>
+                    <i class="bi bi-check-circle mx-2 text-success"></i>
+                    service 1
+                  </span>
+                  <span>
+                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                  </span>
+                </span>
               </li>
               <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
+                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                <span class="d-flex justify-content-evenly w-100">
+                  <span>
+                    <i class="bi bi-check-circle mx-2 text-success"></i>
+                    service 2
+                  </span>
+                  <span>
+                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                  </span>
+                </span>
               </li>
               <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
+                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                <span class="d-flex justify-content-evenly w-100">
+                  <span>
+                    <i class="bi bi-check-circle mx-2 text-success"></i>
+                    service 3
+                  </span>
+                  <span>
+                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                  </span>
+                </span>
               </li>
               <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
+                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                <span class="d-flex justify-content-evenly w-100">
+                  <span>
+                    <i class="bi bi-check-circle mx-2 text-success"></i>
+                    service 4
+                  </span>
+                  <span>
+                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                  </span>
+                </span>
               </li>
               <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
+                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                <span class="d-flex justify-content-evenly w-100">
+                  <span>
+                    <i class="bi bi-check-circle mx-2 text-success"></i>
+                    service 5
+                  </span>
+                  <span>
+                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                  </span>
+                </span>
               </li>
               <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
+                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                <span class="d-flex justify-content-evenly w-100">
+                  <span>
+                    <i class="bi bi-check-circle mx-2 text-success"></i>
+                    service 6
+                  </span>
+                  <span>
+                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                  </span>
+                </span>
               </li>
               <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
-              </li>
-            </ul>
-          </div>
-          <button type="submit" class="btn btn-primary w-100"><i class="bi bi-cash"></i> Reserve</button>
-        </form>
-      </div>
-
-      
-      <div class="col-4">
-        <form method="post" action="" class="card">
-          {% csrf_token %}
-          <input type="hidden" name="plan" value="pro">
-          <input type="hidden" name="amount" value="35">
-
-          <div class="card-header">
-            <p class="h4 text-center text-muted">Pro</p>
-          </div>
-          <div class="card-body">
-            <p class="h6 text-dark text-center">$35/day</p>
-            <ul class="list-group">
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-x-circle mx-2 text-danger"></i>
-                Cras justo odio
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-x-circle mx-2 text-danger"></i>
-                Cras justo odio
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
+                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                <span class="d-flex justify-content-evenly w-100">
+                  <span>
+                    <i class="bi bi-check-circle mx-2 text-success"></i>
+                    service 7
+                  </span>
+                  <span>
+                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                  </span>
+                </span>
               </li>
             </ul>
+            <div class="d-flex w-100 justify-content-end pt-1">
+              <a href="#" class="">&plus; Add service</a>
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary w-100"><i class="bi bi-cash"></i> Reserve</button>
-
-        </form>
-      </div>
-
-      
-      <div class="col-4">
-        <form method="post" action="" class="card">
-          {% csrf_token %}
-          <input type="hidden" name="plan" value="premium">
-          <input type="hidden" name="amount" value="50">
-          <div class="card-header">
-            <p class="h4 text-muted text-center">Premium</p>
-          </div>
-          <div class="card-body">
-            <p class="h6 text-dark text-center">$50/day</p>
-            <ul class="list-group">
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex justify-content-start align-items-center">
-                <i class="bi bi-check-circle mx-2 text-success"></i>
-                Cras justo odio
-              </li>
-            </ul>
-          </div>
-          <button type="submit" class="btn btn-primary w-100"><i class="bi bi-cash"></i> Reserve</button>
-        </form>
-      </div>
+          <button type="submit" class="btn w-100 btn-primary"><i
+              class="bi bi-cash"></i> Proceed </button>
+        </div>
+      </form>
+      </div
 
     </div>
   </section><!-- End About Section-->
-{% block footer %}{% endblock %}
+  {% block footer %}{% endblock %}
 </main><!-- End #main -->
 {% endblock content %}

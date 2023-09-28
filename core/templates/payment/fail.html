@@ -2,8 +2,29 @@
 {% load static %}
 {% block title %}Payment - Fail{% endblock title %}
 {% block content %}
+<br /><br /><br /><br /><br /><br />
   <!-- ======= Property Search Section ======= --> 
   <div class="click-closed"></div>
 
+  <div style="background: red; margin-top: -35px;" class="p-1"></div>
+
+  <div style="border-radius: 10px;" class="container my-4 py-1 ">
+      <div class="">
+          <div class="d-flex justify-content-center align-items-center mt-5 pt-5 pb-4">
+              <div>
+                  <p class="h1 text-center">Payment cancelled</p>
+                  <p>
+                      Note: we are not responsible for anything that happens after a payment is cancelled 
+                  </p>
+              </div>
+          </div>
+          <div class="text-center">
+              <a href="/" class=" text-decoration-none">try again later</a>
+          </div>
+      </div>
+      <div class=" mt-5 text-center pb-2">
+          <a href="/" class="btn btn-secondary pb-3 h3"> <span class="h2">&leftarrow;</span> Goto home page</a>
+      </div>
+  </div>
   {% block footer %}{% endblock footer %}
 {% endblock content %}
