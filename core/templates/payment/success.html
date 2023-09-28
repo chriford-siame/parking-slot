@@ -4,14 +4,26 @@
 {% block content %}
 <br /><br /><br /><br /><br /><br />
   <main>
-    <div class="container">
-      <h4 class="text-center text-muted">Payment Successful</h4><br />
-      <div class="d-flex p-3 mt-0 bg-success justify-content-center justify-items-center">
-        <div>
-          <p class="text-white">Your parking slot has reserved for you <br /> Open the document below to see more details</p>
+    <div style="background: rgba(65, 229, 65, 0.902); margin-top: -35px;" class="p-1"></div>
+    <div style="border-radius: 10px;" class="container my-4 py-1 ">
+        <div class="">
+        <div class="d-flex justify-content-center align-items-center mt-5 pt-5 pb-4">
+            <div>
+                <p class="h1 text-center">Payment done successfully</p>
+                <p>
+                    Note: we are not responsible for anything that happens after a payment is cancelled 
+                </p>
+            </div>
         </div>
-      </div>
     </div>
+    <div class="text-center column">
+        <img src="{% static 'assets/img/order.png' %}" height="70" width="70" alt="" srcset="">
+        <a href="{% static 'assets/receipt-sample.pdf' %}" class=" text-decoration-none"><span class="bi bi-check-circle text-success"></span> Download receipt</a>
+    </div>
+    <div class=" mt-5 text-center pb-2">
+        <a href="/" class="btn btn-secondary pb-3 h3"> <span class="h2">&leftarrow;</span> Goto home page</a>
+    </div>
+</div>
   </main><!-- End #main -->
   {% block footer %}{% endblock footer %}
 {% endblock content %}
