@@ -16,7 +16,7 @@ def process_payment(plan, amount):
     hed = {'Authorization': 'Bearer ' + auth_token}
     data = {
         "tx_ref": ''+str(math.floor(1000000 + random.random()*9000000)),
-        "amount": amount,
+        "amount": float(amount),
         "currency": "ZMW",
         "redirect_url": "http://localhost:8001/payment/callback",
         "payment_options": "card, ZBMobile",
@@ -126,7 +126,7 @@ def parking_slot_plans(request):
                 return redirect('index')
             obj = dict(
                 plan=plan,
-                amount=int(amount),
+                amount=amount,
             )
             # TODO: query the plan dynamically by submitted plan
             return redirect(
