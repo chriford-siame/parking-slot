@@ -7,116 +7,158 @@
   <!-- =======Plans Section ======= -->
   <br /><br /><br /><br /><br /><br />
   <section class="container">
-    <div class="d-flex justify-content-center">
+    <div class="d-flex w-100 justify-content-evenly">
+      <div class="w-100 d-flex justify-content-evenly">
+        <div class="col-md-5">
+          <form method="post" class="card">
+            {% csrf_token %}
+            <input type="hidden" name="plan" value="Reservation Plan">
+            <input type="hidden" name="amount" value="153.00">
+            <div class="card-header">
+              <p class="h4 text-muted text-center">Reservation Plan</p>
+            </div>
+            <div class="card-body">
+              <p class="h6 text-muted text-center">Total: $153/day</p>
+              <ul class="list-group border-bottom">
+                <li
+                  class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                  <span class="d-flex justify-content-evenly w-100">
+                    <span>
+                      <i class="bi bi-check-circle mx-2 text-success"></i>
+                      service 1
+                    </span>
+                    <span>
+                      <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                    </span>
+                  </span>
+                </li>
+                <li
+                  class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                  <span class="d-flex justify-content-evenly w-100">
+                    <span>
+                      <i class="bi bi-check-circle mx-2 text-success"></i>
+                      service 2
+                    </span>
+                    <span>
+                      <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                    </span>
+                  </span>
+                </li>
+                <li
+                  class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                  <span class="d-flex justify-content-evenly w-100">
+                    <span>
+                      <i class="bi bi-check-circle mx-2 text-success"></i>
+                      service 3
+                    </span>
+                    <span>
+                      <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                    </span>
+                  </span>
+                </li>
+                <li
+                  class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                  <span class="d-flex justify-content-evenly w-100">
+                    <span>
+                      <i class="bi bi-check-circle mx-2 text-success"></i>
+                      service 4
+                    </span>
+                    <span>
+                      <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                    </span>
+                  </span>
+                </li>
+                <li
+                  class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                  <span class="d-flex justify-content-evenly w-100">
+                    <span>
+                      <i class="bi bi-check-circle mx-2 text-success"></i>
+                      service 5
+                    </span>
+                    <span>
+                      <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                    </span>
+                  </span>
+                </li>
+                <li
+                  class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                  <span class="d-flex justify-content-evenly w-100">
+                    <span>
+                      <i class="bi bi-check-circle mx-2 text-success"></i>
+                      service 6
+                    </span>
+                    <span>
+                      <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                    </span>
+                  </span>
+                </li>
+                <li
+                  class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
+                  <span class="d-flex justify-content-evenly w-100">
+                    <span>
+                      <i class="bi bi-check-circle mx-2 text-success"></i>
+                      service 7
+                    </span>
+                    <span>
+                      <i class="bi bi-dash-circle mx-2 text-danger"></i>
+                    </span>
+                  </span>
+                </li>
+              </ul>
+              <div class="d-flex w-100 justify-content-end pt-1">
+                <a href="#" class>&plus; Add service</a>
+              </div>
+            </div>
+            <button type="submit" class="btn w-100 btn-primary"><i
+                class="bi bi-cash"></i> Proceed </button>
+          </form>
+        </div>
 
-      <div class="col-4">
-        <form method="post" action class="card">
-          {% csrf_token %}
-          <input type="hidden" name="plan" value="Plan">
-          <input type="hidden" name="amount" value="153.00">
-          <div class="card-header">
-            <p class="h4 text-muted text-center">Plan</p>
-          </div>
-          <div class="card-body">
-            <p class="h6 text-muted text-center">Total: $153/day</p>
-            <ul class="list-group border-bottom">
-              <li
-                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
-                <span class="d-flex justify-content-evenly w-100">
-                  <span>
-                    <i class="bi bi-check-circle mx-2 text-success"></i>
-                    service 1
-                  </span>
-                  <span>
-                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
-                  </span>
-                </span>
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
-                <span class="d-flex justify-content-evenly w-100">
-                  <span>
-                    <i class="bi bi-check-circle mx-2 text-success"></i>
-                    service 2
-                  </span>
-                  <span>
-                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
-                  </span>
-                </span>
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
-                <span class="d-flex justify-content-evenly w-100">
-                  <span>
-                    <i class="bi bi-check-circle mx-2 text-success"></i>
-                    service 3
-                  </span>
-                  <span>
-                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
-                  </span>
-                </span>
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
-                <span class="d-flex justify-content-evenly w-100">
-                  <span>
-                    <i class="bi bi-check-circle mx-2 text-success"></i>
-                    service 4
-                  </span>
-                  <span>
-                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
-                  </span>
-                </span>
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
-                <span class="d-flex justify-content-evenly w-100">
-                  <span>
-                    <i class="bi bi-check-circle mx-2 text-success"></i>
-                    service 5
-                  </span>
-                  <span>
-                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
-                  </span>
-                </span>
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
-                <span class="d-flex justify-content-evenly w-100">
-                  <span>
-                    <i class="bi bi-check-circle mx-2 text-success"></i>
-                    service 6
-                  </span>
-                  <span>
-                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
-                  </span>
-                </span>
-              </li>
-              <li
-                class="list-group-item px-4 border-0 d-flex w-100 justify-content-start align-items-center">
-                <span class="d-flex justify-content-evenly w-100">
-                  <span>
-                    <i class="bi bi-check-circle mx-2 text-success"></i>
-                    service 7
-                  </span>
-                  <span>
-                    <i class="bi bi-dash-circle mx-2 text-danger"></i>
-                  </span>
-                </span>
-              </li>
-            </ul>
-            <div class="d-flex w-100 justify-content-end pt-1">
-              <a href="#" class="">&plus; Add service</a>
+        <div class="property-summary col-md-6 border border-bottom-0 border-top-0 px-2">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="title-box-d section-t4">
+                <h3 class="title-d text-center">Kabwe Airport</h3>
+              </div>
             </div>
           </div>
-          <button type="submit" class="btn w-100 btn-primary"><i
-              class="bi bi-cash"></i> Proceed </button>
-        </div>
-      </form>
-      </div
 
+          <div class="summary-list">
+            <ul class="list">
+              <li class="d-flex justify-content-between">
+                <strong>Occupied Space:</strong>
+                <span>48</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <strong>Available Space:</strong>
+                <span>58</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <strong>Destination:</strong>
+                <span>Kabwe</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <strong>Current location:</strong>
+                <span>Kabulonga
+                </span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <strong>Distance:</strong>
+                <span>20km
+                  <sup>2</sup>
+                </span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <strong>Active:</strong>
+                <span>24/7</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section><!-- End About Section-->
-  {% block footer %}{% endblock %}
 </main><!-- End #main -->
+<br /><br /><br /><br /><br />
 {% endblock content %}
